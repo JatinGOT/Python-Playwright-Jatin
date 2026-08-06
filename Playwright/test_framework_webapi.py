@@ -3,6 +3,7 @@ import json
 import pytest
 from playwright.sync_api import Playwright, expect
 
+from PageObject.Login import LoginPage
 from PytestPython.PytestPython.playwright.conftest import user_credentials
 from utils.apiBase import BaseApi
 
@@ -25,6 +26,8 @@ def test_api(playwright:Playwright ,userCredentials):
     api = BaseApi()
     order_Id =  api.createOrder(playwright , userCredentials)
 
+    # Log In
+    loginPage = LoginPage(page)
 
     #login
     page.goto("https://rahulshettyacademy.com/client")
