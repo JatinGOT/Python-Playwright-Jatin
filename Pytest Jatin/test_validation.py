@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def setup():
     print("I am fixture")
 def test_initial(setup):
