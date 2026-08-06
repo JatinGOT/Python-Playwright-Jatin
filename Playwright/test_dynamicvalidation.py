@@ -45,3 +45,5 @@ def test_childwindow(page: Page):
         emailText = email[1].strip().split(" ")[0]
         print("Email :" , emailText)
         assert emailText == "mentor@rahulshettyacademy.com"
+
+#
